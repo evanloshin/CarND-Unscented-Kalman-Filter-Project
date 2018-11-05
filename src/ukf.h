@@ -66,7 +66,15 @@ public:
 
   ///* Sigma point spreading parameter
   double lambda_;
-
+    
+  //Measurement Matrix for lidar update
+  MatrixXd H_;
+  
+  //Measurement noise covariance matrix for lidar
+  MatrixXd R_;
+  
+  //Output file for recording NIS
+  std::ofstream outputFile_;
 
   /**
    * Constructor
